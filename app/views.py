@@ -5,10 +5,12 @@ Werkzeug Documentation:  http://werkzeug.pocoo.org/documentation/
 This file creates your application.
 """
 
-from app import app
-from flask import render_template, request, redirect, url_for, flash
+#from app import app
+from  datetime import date
+import datetime
+from flask import render_template, request, redirect, url_for, flash,Flask
 
-
+app = Flask(__name__)
 ###
 # Routing for your application.
 ###
@@ -18,16 +20,22 @@ def home():
     """Render website's home page."""
     return render_template('home.html')
 
-
+#now = datetime.datetime.now() # today's date
+#today=date.today()
+#date_joined = today.strftime("%B, %Y")
+dj = datetime.date(2018, 10, 9) # a specific date
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Mary Jane")
+    return render_template('about.html', name="Tyler Thomas")
 
 
 ###
 # The functions below should be applicable to all Flask apps.
 ###
+
+def format_date_joined(date):
+    return date.strftime("%B, %Y")
 
 @app.route('/<file_name>.txt')
 def send_text_file(file_name):
@@ -35,7 +43,12 @@ def send_text_file(file_name):
     file_dot_text = file_name + '.txt'
     return app.send_static_file(file_dot_text)
 
+@app.route('/profile')
+def profile():
+    date_joined= format_date_joined(dj)
+    return render_template('profile.html', Date=date_joined)
 
+    #return "User {0}".format(username)
 @app.after_request
 def add_header(response):
     """
