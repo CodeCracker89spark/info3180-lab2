@@ -10,7 +10,7 @@ from  datetime import date
 import datetime
 from flask import render_template, request, redirect, url_for, flash,Flask
 
-app = Flask(__name__)
+
 ###
 # Routing for your application.
 ###
