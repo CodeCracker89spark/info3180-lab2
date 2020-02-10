@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     padding-top: 5rem;
 
@@ -60,4 +61,68 @@ button{
 	height: 50px;
 	width: 200px;
 	text-align: center;
+=======
+body {
+    padding-top: 5rem;
+
+}
+#pic{
+	margin-top: 10px;
+	border-radius: 50%;
+}
+#Top{
+	color:black;
+	background-color: blue;
+	height: 50%;
+
+	margin-top: -15px;
+	width: 100%;
+	border: 3px yellow solid;
+	/*justify-content: center;
+	vertical-align: center;*/
+	text-align: center;
+}
+
+#Bottom{
+height:50%;
+}
+
+.flex-item{
+	text-align: center;
+}
+
+.numbers{
+	font-weight: bold;
+}
+#flex-container{
+	display: flex;
+	margin-left: 50px;
+	/*margin-left: 50px;
+	margin-right: 50px;*/
+	align-items: center;
+	width: 80%;
+	margin-top: 10px;
+	justify-content: space-between;
+	height: 80%;
+	flex-direction: row;
+	/*border: 2px red dotted;
+	
+	vertical-align: middle;*/
+	
+}
+
+#butdiv{
+	margin: auto;
+
+	text-align: center;
+}
+button{
+	background-color: red;
+	color: black;
+	border-radius: 12px;
+	margin-left: -100px;
+	height: 50px;
+	width: 200px;
+	text-align: center;
+>>>>>>> 4eef7d6894ff506c57272a2e4996e3ae178137d0
 }
